@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  extends: ['standard', 'plugin:tyrecheck/recommended', 'plugin:prettier/recommended'],
+  extends: ['standard', 'plugin:prettier/recommended'],
   rules: {
     'no-console': [process.env.NODE_ENV === 'production' ? 'error' : 0, { allow: ["warn", "error"] }],
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 0,

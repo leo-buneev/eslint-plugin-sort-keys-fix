@@ -31,19 +31,19 @@ Add `sort-keys-fix` to the plugins section of your `.eslintrc` configuration fil
 ```
 
 
-Then configure the rules you want to use under the rules section.
+Then add sort-keys-fix rule under the rules section.
 
 ```json
 {
     "rules": {
-        "sort-keys-fix/rule-name": 2
+        "sort-keys-fix/sort-keys-fix": 2
     }
 }
 ```
 
-## Supported Rules
+## Rule configuration
 
-* Fill in provided rules here
+For available config options, see [official sort-keys reference](https://eslint.org/docs/rules/sort-keys#require-object-keys-to-be-sorted-sort-keys). All options supported by `sort-keys` are supported by `sort-keys-fix`.
 
 
 
