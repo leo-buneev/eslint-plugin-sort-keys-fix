@@ -24,9 +24,9 @@ Add `sort-keys-fix` to the plugins section of your `.eslintrc` configuration fil
 
 ```json
 {
-    "plugins": [
-        "sort-keys-fix"
-    ]
+  "plugins": [
+    "sort-keys-fix"
+  ]
 }
 ```
 
@@ -36,8 +36,25 @@ Then add sort-keys-fix rule under the rules section.
 ```json
 {
     "rules": {
-        "sort-keys-fix/sort-keys-fix": 2
+        "sort-keys-fix/sort-keys-fix": "warn"
     }
+}
+```
+
+Often it makes sense to enable `sort-keys-fix` onluy for certain files/directories. For cases like that, use override key of eslint config:
+```json
+{
+  "rules": {
+    ...
+  },
+  "overrides": [
+    {
+      "files": ["src/alphabetical.js", "bin/*.js", "lib/*.js"],
+      "rules": {
+        "sort-keys-fix/sort-keys-fix": "warn"
+      }
+    }
+  ]
 }
 ```
 
