@@ -41,7 +41,7 @@ Then add sort-keys-fix rule under the rules section.
 }
 ```
 
-Often it makes sense to enable `sort-keys-fix` onluy for certain files/directories. For cases like that, use override key of eslint config:
+Often it makes sense to enable `sort-keys-fix` only for certain files/directories. For cases like that, use override key of eslint config:
 
 ```json
 {
@@ -61,7 +61,7 @@ Often it makes sense to enable `sort-keys-fix` onluy for certain files/directori
 
 ## Rule configuration
 
-For available config options, see [official sort-keys reference](https://eslint.org/docs/rules/sort-keys#require-object-keys-to-be-sorted-sort-keys). All options supported by `sort-keys` are supported by `sort-keys-fix`.
+For available config options, see [official sort-keys reference](https://eslint.org/docs/rules/sort-keys#require-object-keys-to-be-sorted-sort-keys). All options supported by `sort-keys`, besides `minKeys`, are supported by `sort-keys-fix`.
 
 
 
