@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-sort-keys-fix",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Fork of eslint rule that sorts keys in objects (https://eslint.org/docs/rules/sort-keys) with autofix enabled",
   "repository": {
     "url": "https://github.com/leo-buneev/eslint-plugin-sort-keys-fix",
@@ -16,23 +16,24 @@
   "scripts": {
     "lint": "eslint ./lib",
     "lint-fix": "eslint ./lib --fix",
-    "test": "jest"
+    "test": "jest",
+    "test-debug": "node --inspect node_modules/.bin/jest --watch --runInBand"
   },
   "dependencies": {
-    "requireindex": "~1.1.0"
+    "requireindex": "~1.2.0"
   },
   "devDependencies": {
-    "eslint": "~5.8.0",
-    "eslint-config-prettier": "^3.1.0",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-node": "^8.0.0",
-    "eslint-plugin-prettier": "^3.0.0",
-    "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0",
+    "eslint": "~6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
     "eslint-plugin-tyrecheck": "https://tycgitlab.tyrecheck.com/leonid.buneev/eslint-plugin-tyrecheck.git",
-    "jest": "^23.6.0",
-    "prettier": "^1.14.3"
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1"
   },
   "engines": {
     "node": ">=0.10.0"
