@@ -175,11 +175,24 @@ ruleTester.run('sort-keys-fix', rule, {
   ],
   invalid: [
     // move comments on the same line as property together with property
-    // not implemented yet
+    {
+      code: 'var obj = {\na:1,\n _:2, // comment\n b:3\n}',
+      errors: ["Expected object keys to be in ascending order. '_' should be before 'a'."],
+      output: 'var obj = {\n_:2, // comment\n a:1,\n b:3\n}',
+    },
+
+    // move comments on the same line as property together with property, multiline comment syntax
+    {
+      code: 'var obj = {\na:1,\n _:2, /* comment */\n b:3\n}',
+      errors: ["Expected object keys to be in ascending order. '_' should be before 'a'."],
+      output: 'var obj = {\n_:2, /* comment */\n a:1,\n b:3\n}',
+    },
+
+    // Multiple comments fail currently
     // {
-    //   code: 'var obj = {\na:1,\n _:2, // comment\n b:3\n}',
-    //   errors: ["Expected object keys to be in ascending order. '_' should be before 'a'."],
-    //   output: 'var obj = {\n_:2, // comment\n a:1,\n b:3\n}',
+    //  code: 'var obj = {\na:1, // comment a\n _:2, // comment _\n b:3 // comment b\n}',
+    //  errors: ["Expected object keys to be in ascending order. '_' should be before 'a'."],
+    //  output: 'var obj = {\n_:2, // comment _\n a:1, // comment a\n b:3 // comment b\n}',
     // },
 
     // default (asc)
