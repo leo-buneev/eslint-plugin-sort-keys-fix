@@ -188,6 +188,13 @@ ruleTester.run('sort-keys-fix', rule, {
       output: 'var obj = {\n_:2, /* comment */\n a:1,\n b:3\n}',
     },
 
+    // Multiple comments fail currently
+    // {
+    //  code: 'var obj = {\na:1, // comment a\n _:2, // comment _\n b:3 // comment b\n}',
+    //  errors: ["Expected object keys to be in ascending order. '_' should be before 'a'."],
+    //  output: 'var obj = {\n_:2, // comment _\n a:1, // comment a\n b:3 // comment b\n}',
+    // },
+
     // default (asc)
     {
       code: 'var obj = {a:1, _:2, b:3} // default',
