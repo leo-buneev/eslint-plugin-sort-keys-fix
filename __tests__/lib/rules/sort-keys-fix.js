@@ -181,6 +181,20 @@ const test = {
     //   output: 'var obj = {\n_:2, // comment\n a:1,\n b:3\n}',
     // },
 
+    // move inline comments on the line above property together with property
+    {
+      code: 'var obj = {\n// comment\n// comment 2\na:1,\n_:2,\nb:3\n}',
+      errors: ["Expected object keys to be in ascending order. '_' should be before 'a'."],
+      output: 'var obj = {\n\n\n_:2,\n// comment\n// comment 2\na:1,\nb:3\n}',
+    },
+
+    // move multiline comments on the line above property together with property
+    {
+      code: 'var obj = {\n/* comment\n comment 2 */\na:1,\n_:2,\nb:3\n}',
+      errors: ["Expected object keys to be in ascending order. '_' should be before 'a'."],
+      output: 'var obj = {\n\n_:2,\n/* comment\n comment 2 */\na:1,\nb:3\n}',
+    },
+
     // default (asc)
     {
       code: 'var obj = {a:1, _:2, b:3} // default',
