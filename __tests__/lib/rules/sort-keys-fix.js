@@ -9,6 +9,7 @@
 // Requirements
 // ------------------------------------------------------------------------------
 
+const path = require('path')
 const rule = require('../../../lib/rules/sort-keys-fix')
 const RuleTester = require('eslint').RuleTester
 
@@ -16,9 +17,7 @@ const RuleTester = require('eslint').RuleTester
 // Tests
 // ------------------------------------------------------------------------------
 
-const ruleTester = new RuleTester()
-
-ruleTester.run('sort-keys-fix', rule, {
+const test = {
   valid: [
     // default (asc)
     { code: 'var obj = {_:2, a:1, b:3} // default', options: [] },
@@ -763,4 +762,14 @@ ruleTester.run('sort-keys-fix', rule, {
     //   errors: ["Expected object keys to be in natural insensitive descending order. 'b' should be before '_'."],
     // },
   ],
+}
+
+const ruleTester = new RuleTester()
+
+ruleTester.run('sort-keys-fix', rule, test)
+
+const babelRuleTester = new RuleTester({
+  parser: path.resolve('node_modules/babel-eslint/lib/index.js'),
 })
+
+babelRuleTester.run('babel-eslint/sort-keys-fix', rule, test)
