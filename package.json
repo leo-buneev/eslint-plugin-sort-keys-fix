@@ -20,6 +20,9 @@
     "test-debug": "node --inspect node_modules/.bin/jest --watch --runInBand"
   },
   "dependencies": {
+    "espree": "^6.1.2",
+    "esutils": "^2.0.2",
+    "natural-compare": "^1.4.0",
     "requireindex": "~1.2.0"
   },
   "devDependencies": {
