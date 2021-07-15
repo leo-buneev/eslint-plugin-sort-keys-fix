@@ -32,7 +32,7 @@
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "eslint-plugin-tyrecheck": "https://tycgitlab.tyrecheck.com/leonid.buneev/eslint-plugin-tyrecheck.git",
+    "eslint-plugin-tyrecheck": "^2.24.0",
     "jest": "^25.4.0",
     "prettier": "^1.19.1"
   },
