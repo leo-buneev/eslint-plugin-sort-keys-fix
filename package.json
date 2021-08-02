@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-sort-keys-fix",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Fork of eslint rule that sorts keys in objects (https://eslint.org/docs/rules/sort-keys) with autofix enabled",
   "repository": {
     "url": "https://github.com/leo-buneev/eslint-plugin-sort-keys-fix",
