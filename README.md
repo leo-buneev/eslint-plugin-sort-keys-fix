@@ -41,12 +41,12 @@ Then add sort-keys-fix rule under the rules section.
 }
 ```
 
-Often it makes sense to enable `sort-keys-fix` only for certain files/directories. For cases like that, use override key of eslint config:
+Often it makes sense to enable `sort-keys-fix` only for certain files/directories. To do this, remove "sort-keys-fix/sort-keys-fix": "warn"` from`rules` and instead set an override for the specific extensions you wish to target.
 
 ```jsonc
 {
   "rules": {
-    // ...
+    // ... Does not have the sort-keys-fix rule.
   },
   "overrides": [
     {
